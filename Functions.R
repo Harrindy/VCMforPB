@@ -1,8 +1,3 @@
-library(Rcpp)
-library(RcppArmadillo)
-sourceCpp("VCM.cpp")
-
-
 VaryCurve=function(u,mod=1)
 {
   if(mod==2)
