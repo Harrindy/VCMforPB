@@ -37,7 +37,7 @@ Now you are ready to fit our varying-coefficient model.
                 plot(u_grid,Individual.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
         }
 ### An example
-Download the "individual.cvs" file to the directory
+Download the "individual.cvs" file to the directory. Run the following programs.
 
         individual.data=read.csv("individual.csv")
         u_grid=seq(-1.5,1.5,length=400)
@@ -54,7 +54,7 @@ Download the "individual.cvs" file to the directory
                 plot(u_grid,Individual.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
         }
 
-Output is
+Output are
 
         >  Individual.fit$h
         [1] 0.5753412
@@ -87,7 +87,7 @@ Output is
         }
         
 ### An example
-Download the "random.cvs" file to the directory
+Download the "random.cvs" file to the directory. Run the following programs.
 
         random.data=read.csv("random.csv")
         u_grid=seq(-1.5,1.5,length=400)
@@ -105,7 +105,7 @@ Download the "random.cvs" file to the directory
                 plot(u_grid,Random.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
         }
 
-Output is
+Output are
 
         >  Random.fit$h
         [1] 0.7529637
@@ -138,7 +138,7 @@ Output is
         }
         
 ### An example
-Download the "homogeneous.cvs" file to the directory
+Download the "homogeneous.cvs" file to the directory. Run the following programs.
 
         homogeneous.data=read.csv("homogeneous.csv")
         u_grid=seq(-1.5,1.5,length=400)
@@ -156,7 +156,7 @@ Download the "homogeneous.cvs" file to the directory
                 plot(u_grid,Homogeneous.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
         }
 
-Output is
+Output are
 
         >  Homogeneous.fit$h
         [1] 0.3141536
