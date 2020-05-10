@@ -8,9 +8,12 @@ The required R packges are Rcpp and RcppArmadillo. You can install these two R p
         
 The necessary files are "VCM.cpp" and "Functions.R". Please download these two files into the directory of your R or Rstudio, and use the following codes to source both of them.
 
+        library(Rcpp)
+        library(RcppArmadillo)
+        sourceCpp("VCM.cpp")
         source("Functions.R")
         
-The "VCM.cpp" file is sourced in "Function.R" automatically. Now you are ready to fit our varying-coefficient model.
+Now you are ready to fit our varying-coefficient model.
 
 ## When indiviudal-level biomonitoring is used
 
