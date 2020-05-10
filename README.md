@@ -10,7 +10,7 @@ The necessary files are "VCM.cpp" and "Functions.R". Please download these two f
 
         source("Functions.R")
         
-The "VCM.cpp" file will be sourced in "Function.R". Now you are ready to fit our varying-coefficient model.
+The "VCM.cpp" file is sourced in "Function.R" automatically. Now you are ready to fit our varying-coefficient model.
 
 ## When indiviudal-level biomonitoring is used
 
