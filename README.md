@@ -130,8 +130,35 @@ Output is
         Homogeneous.fit$fit # a (p+1)*length(u_grid) matrix
         
         # You can plot the estimates by 
-        par(mfrow=c(1,nrow(Homogeneous.fit$fit)))
+        par(mfrow=c(ceiling(nrow(Homogeneous.fit$fit)/2),2))
+        par(mar=c(4,4,.1,.1))
         for(k in 1:nrow(Homogeneous.fit$fit))
         {
-                plot(u_grid,Homogeneous.fit$fit[k,],type="l)
+                plot(u_grid,Homogeneous.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
         }
+        
+### An example
+Download the "homogeneous.cvs" file to the directory
+
+        homogeneous.data=read.csv("homogeneous.csv")
+        u_grid=seq(-1.5,1.5,length=400)
+        Z=homogeneous.data$Z
+        U=homogeneous.data$U
+        X=cbind(homogeneous.data$X1,homogeneous.data$X2,homogeneous.data$X3,homogeneous.data$X4)
+        W=homogeneous.data$W
+        PoolID=homogeneous.data$poolID
+        Homogeneous.fit=HT(u_grid,Z,U,X,PoolID,W,c(0.01,1))
+        Homogeneous.fit$h
+        par(mfrow=c(ceiling(nrow(Homogeneous.fit$fit)/2),2))
+        par(mar=c(4,4,.1,.1))
+        for(k in 1:nrow(Homogeneous.fit$fit))
+        {
+                plot(u_grid,Homogeneous.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
+        }
+
+Output is
+
+        >  Homogeneous.fit$h
+        [1] 0.3141536
+        
+![Optional Text](../master/homogeneous.png)
