@@ -28,7 +28,7 @@ The R code is
         Individual.fit$h # a single value
         Individual.fit$fit # a (p+1)*length(u_grid) matrix
         
-        # You can plot the result by 
+        # You can plot the estimates by 
         par(mfrow=c(1,nrow(Individual.fit$fit)))
         for(k in 1:nrow(Individual.fit$fit))
         {
@@ -54,7 +54,7 @@ The R code is
         Random.fit$h # a single value
         Random.fit$fit # a (p+1)*length(u_grid) matrix
         
-        # You can plot the result by 
+        # You can plot the estimates by 
         par(mfrow=c(1,nrow(Random.fit$fit)))
         for(k in 1:nrow(Random.fit$fit))
         {
@@ -80,7 +80,7 @@ The R code is similar to the one in random pooling:
         Homogeneous.fit$h # a single value
         Homogeneous.fit$fit # a (p+1)*length(u_grid) matrix
         
-        # You can plot the result by 
+        # You can plot the estimates by 
         par(mfrow=c(1,nrow(Homogeneous.fit$fit)))
         for(k in 1:nrow(Homogeneous.fit$fit))
         {
