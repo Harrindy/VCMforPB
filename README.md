@@ -29,9 +29,10 @@ The R code is
         Individual.fit$fit # a (p+1)*length(u_grid) matrix
         
         # You can plot the result by 
+        par(mfrow=c(1,nrow(Individual.fit$fit)))
         for(k in 1:nrow(Individual.fit$fit))
         {
-                plot(u_grid,Individual.fit$fit[k,])
+                plot(u_grid,Individual.fit$fit[k,],type="l")
         } 
              
 ## When random pooling is used
@@ -54,9 +55,10 @@ The R code is
         Random.fit$fit # a (p+1)*length(u_grid) matrix
         
         # You can plot the result by 
+        par(mfrow=c(1,nrow(Random.fit$fit)))
         for(k in 1:nrow(Random.fit$fit))
         {
-                plot(u_grid,Random.fit$fit[k,])
+                plot(u_grid,Random.fit$fit[k,],type="l")
         }
         
 ## When homogeneous pooling is used
@@ -79,7 +81,8 @@ The R code is similar to the one in random pooling:
         Homogeneous.fit$fit # a (p+1)*length(u_grid) matrix
         
         # You can plot the result by 
+        par(mfrow=c(1,nrow(Homogeneous.fit$fit)))
         for(k in 1:nrow(Homogeneous.fit$fit))
         {
-                plot(u_grid,Homogeneous.fit$fit[k,])
+                plot(u_grid,Homogeneous.fit$fit[k,],type="l)
         }
