@@ -30,10 +30,11 @@ Now you are ready to fit our varying-coefficient model.
         Individual.fit$fit # a (p+1)*length(u_grid) matrix
         
         # You can plot the estimates by 
-        par(mfrow=c(nrow(Individual.fit$fit),1))
+        par(mfrow=c(ceiling(nrow(Individual.fit$fit)/2),2))
+        par(mar=c(4,4,.1,.1))
         for(k in 1:nrow(Individual.fit$fit))
         {
-                 plot(u_grid,Individual.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
+                plot(u_grid,Individual.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
         }
 ### An example
 Download the individual.cvs file to the directory
@@ -46,7 +47,7 @@ Download the individual.cvs file to the directory
         W=individual.data$W
         Individual.fit=IndT(u_grid,Y,U,X,W,c(0.01,1))
         Individual.fit$h
-        par(mfrow=c(nrow(Individual.fit$fit),1))
+        par(mfrow=c(ceiling(nrow(Individual.fit$fit)/2),2))
         par(mar=c(4,4,.1,.1))
         for(k in 1:nrow(Individual.fit$fit))
         {
