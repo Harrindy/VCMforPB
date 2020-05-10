@@ -6,7 +6,7 @@ The required R packges are Rcpp and RcppArmadillo. You can install these two R p
 
         install.packages(c("RcppArmadillo","Rcpp"))
         
-The necessary files are "VCM.cpp" and "Functions.R". Use the following codes to source both of them.
+The necessary files are "VCM.cpp" and "Functions.R". Please download the two files to the directory of your R/Rstudio. Use the following codes to source both of them.
 
         library(Rcpp)
         library(RcppArmadillo)
@@ -30,12 +30,35 @@ Now you are ready to fit our varying-coefficient model.
         Individual.fit$fit # a (p+1)*length(u_grid) matrix
         
         # You can plot the estimates by 
-        par(mfrow=c(1,nrow(Individual.fit$fit)))
+        par(mfrow=c(nrow(Individual.fit$fit),1))
         for(k in 1:nrow(Individual.fit$fit))
         {
-                plot(u_grid,Individual.fit$fit[k,],type="l")
-        } 
-             
+                 plot(u_grid,Individual.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
+        }
+### An example
+Download the individual.cvs file to the directory
+
+        individual.data=read.csv("individual.csv")
+        u_grid=seq(-1.5,1.5,length=400)
+        Y=individual.data$Y
+        U=individual.data$U
+        X=cbind(individual.data$X1,individual.data$X2,individual.data$X3,individual.data$X4)
+        W=individual.data$W
+        Individual.fit=IndT(u_grid,Y,U,X,W,c(0.01,1))
+        Individual.fit$h
+        par(mfrow=c(nrow(Individual.fit$fit),1))
+        par(mar=c(4,4,.1,.1))
+        for(k in 1:nrow(Individual.fit$fit))
+        {
+                plot(u_grid,Individual.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
+        }
+
+Output is
+
+        >  Individual.fit$h
+        [1] 0.5753412
+        ![Optional Text](../master/individual.png)
+     
 ## When randomly pooled biomonitoring is used
 
         Random.fit=RT(u_grid,Z,U,X,POOLID,W,c(a,b))
