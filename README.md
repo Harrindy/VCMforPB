@@ -57,7 +57,8 @@ Output is
 
         >  Individual.fit$h
         [1] 0.5753412
-        ![Optional Text](../master/individual.png)
+        
+![Optional Text](../master/individual.png)
      
 ## When randomly pooled biomonitoring is used
 
