@@ -6,7 +6,7 @@ The required R packges are Rcpp and RcppArmadillo. You can install these two R p
 
         install.packages(c("RcppArmadillo","Rcpp"))
         
-The necessary files are "VCM.cpp" and "Functions.R". Please download these two files into the directory of your R or Rstudio, and use the following codes to source both of them.
+The necessary files are "VCM.cpp" and "Functions.R". Use the following codes to source both of them.
 
         library(Rcpp)
         library(RcppArmadillo)
