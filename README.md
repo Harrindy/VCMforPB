@@ -14,8 +14,6 @@ The "VCM.cpp" file is sourced in "Function.R" automatically. Now you are ready t
 
 ## When indiviudal-level biomonitoring is used
 
-The R code is
-
         Individual.fit=IndT(u_grid, Y, U, X, W, c(a,b))
         # u_grid is a grid of u-values
         # Y: a size-J vector of individual-level measurements
@@ -36,8 +34,6 @@ The R code is
         } 
              
 ## When random pooling is used
-
-The R code is
 
         Random.fit=RT(u_grid,Z,U,X,POOLID,W,c(a,b))
         # u_grid is a grid of u-values
@@ -62,8 +58,6 @@ The R code is
         }
         
 ## When homogeneous pooling is used
-
-The R code is similar to the one in random pooling:
 
         Homogenous.fit=HT(u_grid,Z,U,X,POOLID,W,c(a,b))
         # u_grid is a grid of u-values
