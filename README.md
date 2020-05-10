@@ -37,7 +37,7 @@ Now you are ready to fit our varying-coefficient model.
                 plot(u_grid,Individual.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
         }
 ### An example
-Download the individual.cvs file to the directory
+Download the "individual.cvs" file to the directory
 
         individual.data=read.csv("individual.csv")
         u_grid=seq(-1.5,1.5,length=400)
@@ -79,11 +79,38 @@ Output is
         Random.fit$fit # a (p+1)*length(u_grid) matrix
         
         # You can plot the estimates by 
-        par(mfrow=c(1,nrow(Random.fit$fit)))
+        par(mfrow=c(ceiling(nrow(Random.fit$fit)/2),2))
+        par(mar=c(4,4,.1,.1))
         for(k in 1:nrow(Random.fit$fit))
         {
-                plot(u_grid,Random.fit$fit[k,],type="l")
+                plot(u_grid,Random.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
         }
+        
+### An example
+Download the "random.cvs" file to the directory
+
+        random.data=read.csv("random.csv")
+        u_grid=seq(-1.5,1.5,length=400)
+        Z=random.data$Z
+        U=random.data$U
+        X=cbind(random.data$X1,random.data$X2,random.data$X3,random.data$X4)
+        W=random.data$W
+        PoolID=random.data$poolID
+        Random.fit=RT(u_grid,Z,U,X,PoolID,W,c(0.01,1))
+        Random.fit$h
+        par(mfrow=c(ceiling(nrow(Random.fit$fit)/2),2))
+        par(mar=c(4,4,.1,.1))
+        for(k in 1:nrow(Random.fit$fit))
+        {
+                plot(u_grid,Random.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
+        }
+
+Output is
+
+        >  Random.fit$h
+        [1] 0.7529637
+        
+![Optional Text](../master/random.png)
         
 ## When homogeneously pooled biomonitoring is used
 
