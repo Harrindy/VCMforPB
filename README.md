@@ -1,8 +1,6 @@
-# Varying-coefficient regression analysis for pooled biomonitoring
+# R programs for the article ``Varying-coefficient regression analysis for pooled biomonitoring."
 
-This repository contains R programs for the article, “Varying-coefficient regression analysis for pooled biomonitorin,” by Dewei Wang, Xichen Mou, and Yan Liu. This article has been submitted for publication.
-
-The required R packges are Rcpp and RcppArmadillo. You can install these two R packages by
+TO run our method in R, the required R packges are Rcpp and RcppArmadillo. You can install these two R packages by
 
         install.packages(c("RcppArmadillo","Rcpp"))
         
