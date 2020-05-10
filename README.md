@@ -12,7 +12,7 @@ The necessary files are "VCM.cpp" and "Functions.R". Please download these two f
         
 The "VCM.cpp" file will be sourced in "Function.R". Now you are ready to fit our varying-coefficient model.
 
-# When indiviudal-level biomonitoring is used
+## When indiviudal-level biomonitoring is used
 
 The R code is
 
@@ -34,7 +34,7 @@ The R code is
                 plot(u_grid,Individual.fit$fit[k,])
         } 
              
-# When random pooling is used
+## When random pooling is used
 
 The R code is
 
@@ -59,7 +59,7 @@ The R code is
                 plot(u_grid,Random.fit$fit[k,])
         }
         
-# When homogeneous pooling is used
+## When homogeneous pooling is used
 
 The R code is similar to the one in random pooling:
 
