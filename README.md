@@ -33,7 +33,7 @@ The "VCM.cpp" file is sourced in "Function.R" automatically. Now you are ready t
                 plot(u_grid,Individual.fit$fit[k,],type="l")
         } 
              
-## When random pooling is used
+## When randomly pooled biomonitoring is used
 
         Random.fit=RT(u_grid,Z,U,X,POOLID,W,c(a,b))
         # u_grid is a grid of u-values
@@ -57,7 +57,7 @@ The "VCM.cpp" file is sourced in "Function.R" automatically. Now you are ready t
                 plot(u_grid,Random.fit$fit[k,],type="l")
         }
         
-## When homogeneous pooling is used
+## When homogeneously pooled biomonitoring is used
 
         Homogenous.fit=HT(u_grid,Z,U,X,POOLID,W,c(a,b))
         # u_grid is a grid of u-values
