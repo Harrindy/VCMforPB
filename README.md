@@ -35,7 +35,7 @@ Now you are ready to fit our varying-coefficient model.
                 plot(u_grid,Individual.fit$fit[k,],type="l",xlab="u",ylab=expression(beta(u)))
         }
 ### An example
-Download the "individual.cvs" file to the directory. Run the following programs.
+Download the "individual.csv" file to the directory. Run the following programs.
 
         individual.data=read.csv("individual.csv")
         u_grid=seq(-1.5,1.5,length=400)
@@ -85,7 +85,7 @@ Output are
         }
         
 ### An example
-Download the "random.cvs" file to the directory. Run the following programs.
+Download the "random.csv" file to the directory. Run the following programs.
 
         random.data=read.csv("random.csv")
         u_grid=seq(-1.5,1.5,length=400)
@@ -136,7 +136,7 @@ Output are
         }
         
 ### An example
-Download the "homogeneous.cvs" file to the directory. Run the following programs.
+Download the "homogeneous.csv" file to the directory. Run the following programs.
 
         homogeneous.data=read.csv("homogeneous.csv")
         u_grid=seq(-1.5,1.5,length=400)
