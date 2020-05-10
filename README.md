@@ -1,6 +1,6 @@
 # R programs for the article ``Varying-coefficient regression analysis for pooled biomonitoring."
 
-To run our method in R, the required R packges are Rcpp and RcppArmadillo. You can install these two R packages by
+The required R packges are Rcpp and RcppArmadillo. You can install these two R packages by
 
         install.packages(c("RcppArmadillo","Rcpp"))
         
