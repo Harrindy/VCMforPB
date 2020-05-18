@@ -1,4 +1,4 @@
-# R programs for the article ``Varying-coefficient regression analysis for pooled biomonitoring."
+# R programs for the article "Varying-coefficient regression analysis for pooled biomonitoring."
 
 The required R packges are Rcpp and RcppArmadillo. You can install these two R packages by
 
