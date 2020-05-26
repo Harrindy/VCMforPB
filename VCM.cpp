@@ -53,7 +53,7 @@ mat VCM_cpp(mat X, vec U, vec Y, double h, vec nx, vec W_sample ,int kernel){
     // Gamma_u=join_cols(X,Uu_X);
     W_u_Gamma_u=Gamma_u;
     W_u_Gamma_u.each_col() %= W_u;
-    res.col(k) = (Gamma_u.t()*W_u_Gamma_u).i()*(W_u_Gamma_u.t()*Y);
+    res.col(k) = solve(Gamma_u.t()*W_u_Gamma_u,W_u_Gamma_u.t()*Y);
   }
   return (res);
 }
