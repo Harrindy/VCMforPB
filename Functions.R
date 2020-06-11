@@ -87,7 +87,8 @@ RT=function(u_grid,Z,U,X,PoolID,W,h_range,kernel_type=2) #W is the sample weight
     W_dotj[index]=sum(W[index]) #normalize W_pool
   }
   
-  mu_star_hat=sum(W_dotj[start_ind]*Z[start_ind]/length(index))/length(start_ind)
+  mu_star_hat=sum(W_dotj[start_ind]*Z[start_ind])/length(U)
+  #mu_star_hat=sum(W_dotj[start_ind]*Z[start_ind]/length(index))/length(start_ind)
   
   #Step1:
   #calculate related input variables from data
